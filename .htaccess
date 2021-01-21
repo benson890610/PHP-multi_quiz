@@ -1,0 +1,19 @@
+## Uncomment below
+## ErrorDocuments, RewriteEngine, RewriteRules
+
+#ErrorDocument 403 http://localhost/advanced_questionare/
+#ErrorDocument 404 http://localhost/advanced_questionare/
+
+#RewriteEngine On
+
+## Home page
+#RewriteRule ^index/?$ index.php
+#RewriteRule ^index/(.+)$ index.php?url=$1 [L]
+
+## Quiz page
+#RewriteRule ^quiz/?$ quiz.php
+#RewriteRule ^quiz/(.+)$ quiz.php?url=$1 [L]
+
+## Client answers page
+#RewriteRule ^user/answers/?$ show.php
+#RewriteRule ^user/answers/(.+)$ show.php?url=$1 [L]
