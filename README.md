@@ -6,4 +6,4 @@ Programming languages:
   - javascript 
   - java 
   - python 
-   -node.js
+  - node.js
