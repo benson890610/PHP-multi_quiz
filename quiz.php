@@ -125,7 +125,7 @@
 		</main>
 
 		<footer>
-			<p>Copyrights &copy; <a href="<?php echo APP_SRC; ?>">Igor Djurdjic</a></p>
+			<p>Copyrights &copy; <a href="https://igordjurdjicsite.online">Igor Djurdjic</a></p>
 		</footer>
 		<script type="text/javascript" src="<?php echo APP_SRC; ?>public/app.js"></script>
 	</body>
