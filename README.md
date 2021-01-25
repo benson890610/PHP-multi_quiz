@@ -1,2 +1,9 @@
-# PHP-multi_quiz
-Knowledge testing quiz for multiple languages such as: mysql, php, javascript, java, python and node.js
+# PHP Testing knowledge quiz for multiple programming languages
+
+Programming languages: 
+  - mysql 
+  - php 
+  - javascript 
+  - java 
+  - python 
+  - node.js
