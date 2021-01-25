@@ -20,7 +20,7 @@
 		<meta name="description" content="Multi advanced questioner">
 		<title>Multi Questioner | Igor Djurdjic</title>
 		<!-- Default Css -->
-		<link rel="stylesheet" type="text/css" href="http://localhost/advanced_questionare/public/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo APP_SRC; ?>public/style.css">
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
 				<!-- CONTENT OF QUIZ -->
 				<?php if(quiz_started()): ?>
 
-				<form class="submitForm" action="http://localhost/advanced_questionare/quiz/<?php echo $quiz->course; ?>" method="post">
+				<form class="submitForm" action="<?php echo APP_SRC . "quiz/" . $quiz->course; ?>" method="post">
 
 					<h3><?php echo $question->currentQuestion; ?></h3>
 
@@ -113,10 +113,10 @@
 						<li><span class="quiz-introdution-left-span">Excellent</span> <span class="quiz-introdution-right-span">(110 - 125) Points</span></li>
 					</ul>
 
-					<form action="http://localhost/advanced_questionare/quiz/<?php echo $quiz->course; ?>" method="post">
+					<form action="<?php echo APP_SRC . "quiz/" . $quiz->course; ?>" method="post">
 						<input type="hidden" name="start" value="true">
 						<button type="submit">Start Quiz</button>
-						<a href="http://localhost/advanced_questionare/" class="backBtn">Back</a>
+						<a href="<?php echo APP_SRC; ?>" class="backBtn">Back</a>
 					</form>
 				</div>
 
@@ -125,8 +125,8 @@
 		</main>
 
 		<footer>
-			<p>Copyrights &copy; <a href="https://igordjurdjicsite.online">Igor Djurdjic</a></p>
+			<p>Copyrights &copy; <a href="<?php echo APP_SRC; ?>">Igor Djurdjic</a></p>
 		</footer>
-		<script type="text/javascript" src="http://localhost/advanced_questionare/public/app.js"></script>
+		<script type="text/javascript" src="<?php echo APP_SRC; ?>public/app.js"></script>
 	</body>
 </html>
