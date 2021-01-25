@@ -1,8 +1,8 @@
 ## Uncomment below
 ## ErrorDocuments, RewriteEngine, RewriteRules
 
-#ErrorDocument 403 http://localhost/advanced_questionare/
-#ErrorDocument 404 http://localhost/advanced_questionare/
+#ErrorDocument 403 yourdomain.com
+#ErrorDocument 404 yourdomain.com
 
 #RewriteEngine On
 

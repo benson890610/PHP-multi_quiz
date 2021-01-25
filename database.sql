@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `quiz_answers_java` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_java`
@@ -73,7 +73,7 @@ INSERT INTO `quiz_answers_java` (`id`, `correct_answer`) VALUES
 CREATE TABLE `quiz_answers_javascript` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_javascript`
@@ -115,7 +115,7 @@ INSERT INTO `quiz_answers_javascript` (`id`, `correct_answer`) VALUES
 CREATE TABLE `quiz_answers_mysql` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_mysql`
@@ -157,7 +157,7 @@ INSERT INTO `quiz_answers_mysql` (`id`, `correct_answer`) VALUES
 CREATE TABLE `quiz_answers_nodejs` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_nodejs`
@@ -199,7 +199,7 @@ INSERT INTO `quiz_answers_nodejs` (`id`, `correct_answer`) VALUES
 CREATE TABLE `quiz_answers_php` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_php`
@@ -241,7 +241,7 @@ INSERT INTO `quiz_answers_php` (`id`, `correct_answer`) VALUES
 CREATE TABLE `quiz_answers_python` (
   `id` smallint UNSIGNED NOT NULL,
   `correct_answer` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_answers_python`
@@ -284,7 +284,7 @@ CREATE TABLE `quiz_category` (
   `id` tinyint UNSIGNED NOT NULL,
   `name` varchar(50) NOT NULL,
   `title` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_category`
@@ -312,7 +312,7 @@ CREATE TABLE `quiz_questions_java` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_java`
@@ -359,7 +359,7 @@ CREATE TABLE `quiz_questions_javascript` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_javascript`
@@ -406,7 +406,7 @@ CREATE TABLE `quiz_questions_mysql` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_mysql`
@@ -453,7 +453,7 @@ CREATE TABLE `quiz_questions_nodejs` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_nodejs`
@@ -500,7 +500,7 @@ CREATE TABLE `quiz_questions_php` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_php`
@@ -547,7 +547,7 @@ CREATE TABLE `quiz_questions_python` (
   `answer3` varchar(100) DEFAULT NULL,
   `answer4` varchar(100) DEFAULT NULL,
   `correct_answer_id` smallint UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `quiz_questions_python`
@@ -752,38 +752,38 @@ ALTER TABLE `quiz_questions_python`
 --
 -- Constraints for table `quiz_questions_java`
 --
-ALTER TABLE `quiz_questions_java`
-  ADD CONSTRAINT `java_foreign_key` FOREIGN KEY (`correct_answer_id`) REFERENCES `quiz_answers_java` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_java
+ADD CONSTRAINT foreign_key_java_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_java(id) ON DELETE CASCADE;
 
 --
 -- Constraints for table `quiz_questions_javascript`
 --
-ALTER TABLE `quiz_questions_javascript`
-  ADD CONSTRAINT `javascript_foreign_key` FOREIGN KEY (`id`) REFERENCES `quiz_answers_javascript` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_javascript
+ADD CONSTRAINT foreign_key_javascript_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_javascript(id) ON DELETE CASCADE;
 
 --
 -- Constraints for table `quiz_questions_mysql`
 --
-ALTER TABLE `quiz_questions_mysql`
-  ADD CONSTRAINT `mysql_foreign_key` FOREIGN KEY (`id`) REFERENCES `quiz_answers_mysql` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_mysql
+ADD CONSTRAINT foreign_key_mysql_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_mysql(id) ON DELETE CASCADE;
 
 --
 -- Constraints for table `quiz_questions_nodejs`
 --
-ALTER TABLE `quiz_questions_nodejs`
-  ADD CONSTRAINT `nodejs_foreign_key` FOREIGN KEY (`id`) REFERENCES `quiz_answers_nodejs` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_nodejs
+ADD CONSTRAINT foreign_key_nodejs_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_nodejs(id) ON DELETE CASCADE;
 
 --
 -- Constraints for table `quiz_questions_php`
 --
-ALTER TABLE `quiz_questions_php`
-  ADD CONSTRAINT `php_foreign_key` FOREIGN KEY (`id`) REFERENCES `quiz_answers_php` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_php
+ADD CONSTRAINT foreign_key_php_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_php(id) ON DELETE CASCADE;
 
 --
 -- Constraints for table `quiz_questions_python`
 --
-ALTER TABLE `quiz_questions_python`
-  ADD CONSTRAINT `python_foreign_key` FOREIGN KEY (`id`) REFERENCES `quiz_answers_python` (`id`) ON DELETE CASCADE;
+ALTER TABLE quiz_questions_python
+ADD CONSTRAINT foreign_key_python_questions FOREIGN KEY(correct_answer_id) REFERENCES quiz_answers_python(id) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
